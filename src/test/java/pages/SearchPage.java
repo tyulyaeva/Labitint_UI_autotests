@@ -6,9 +6,9 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class SearchPage {
-    private static final String BOOKNAME = "Противостояние";
+    private static final String BOOKNAME = "Воспламеняющая";
 
-    @Step("Найти книгу 'Противостояние' автора 'Стивен Кинг'")
+    @Step("Найти книгу 'Воспламеняющая' автора 'Стивен Кинг'")
     public SearchPage SearchPage() {
         $(".search-result")
                 .shouldHave(text(BOOKNAME));
