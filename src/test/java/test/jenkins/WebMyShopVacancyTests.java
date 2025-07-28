@@ -60,13 +60,14 @@ public class WebMyShopVacancyTests extends TestBase {
     @Owner("inna_tyulyaeva")
     @DisplayName("Тест-кейс №4: Проверка добавления товара в корзину")
     @Test
-    void checkPenBasketTest() {
+    void checkProductBasketTest() {
         mainPage.MainPage()
                 .AuthorSearch();
         searchPage.SearchPage();
         bookPage.openProductCard()
                 .clickToAddProduct();
-        basketPage.checkPenBasketTest();
+        basketPage.
+                checkProductBasketTest();
 
     }
 
@@ -81,5 +82,20 @@ public class WebMyShopVacancyTests extends TestBase {
                 .changeSity()
                 .checkChangeSityClick();
     }
-
+    @Tag("myshop_form")
+    @Feature("VacancyJavaQa")
+    @Story("Тестирование формы сайта: https://www.labirint.ru/")
+    @Owner("inna_tyulyaeva")
+    @DisplayName("Тест-кейс №6: Проверка удаления товара из корзину")
+    @Test
+    void checkEmptyBasketTest() {
+        mainPage.MainPage()
+                .AuthorSearch();
+        searchPage.SearchPage();
+        bookPage.openProductCard()
+                .clickToAddProduct();
+        basketPage
+                .checkProductBasketTest()
+                .delProductBasketTest();
+    }
 }

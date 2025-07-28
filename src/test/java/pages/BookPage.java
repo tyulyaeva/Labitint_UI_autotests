@@ -8,13 +8,13 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class BookPage {
     private static final String BOOKNAME = "Воспламеняющая";
-    private final SelenideElement checkProduct = $("._h1_5o36c_18"),
+    private final SelenideElement nameProduct = $("._h1_5o36c_18"),
                                   productCard = $("[href='/books/867711/']"),
                                   buttonAddProduct = $("._actions_zuu52_155").$("._button_ssd04_1");
 
     @Step("Проверить, что заголовок карточки товара содержит наименование книги")
     public BookPage checkProductCardPage() {
-        checkProduct.shouldHave(text(BOOKNAME));
+        nameProduct.shouldHave(text(BOOKNAME));
         return this;
     }
 
