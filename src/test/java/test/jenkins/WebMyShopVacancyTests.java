@@ -25,7 +25,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @Test
     @DisplayName("Тест-кейс №1: Проверка поиска книги")
     void searchResultsShouldContainDeterminedBookTest () {
-        mainPage.MainPage()
+        mainPage.openMainPage()
                 .authorSearch();
         searchPage.searchPage();
     }
@@ -37,7 +37,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №2: Проверка перехода в раздел 'Офисная канцелярия' с помощью меню 'Канцелярия'")
     @Test
     void checkMenuCatalogSectionTest() {
-        mainPage.MainPage();
+        mainPage.openMainPage();
         catalogSectionPage.openCatalogMenu();
     }
 
@@ -48,7 +48,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №3: Проверка просмотра карточки товара")
     @Test
     void checkProductCardTest() {
-        mainPage.MainPage()
+        mainPage.openMainPage()
                 .authorSearch();
         searchPage.searchPage();
         bookPage.openProductCard()
@@ -62,7 +62,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №4: Проверка добавления товара в корзину")
     @Test
     void checkProductBasketTest() {
-        mainPage.MainPage()
+        mainPage.openMainPage()
                 .authorSearch();
         searchPage.searchPage();
         bookPage.openProductCard()
@@ -79,7 +79,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №5: Проверка смены города")
     @Test
     void changeLocationPersonTest() {
-        mainPage.MainPage()
+        mainPage.openMainPage()
                 .changeCity()
                 .checkChangeCityClick();
     }
@@ -90,7 +90,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №6: Проверка удаления товара из корзину")
     @Test
     void checkEmptyBasketTest() {
-        mainPage.MainPage()
+        mainPage.openMainPage()
                 .authorSearch();
         searchPage.searchPage();
         bookPage.openProductCard()
@@ -107,7 +107,7 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №7: Проверка добавления товара в отложенные товары")
     @Test
     void checkPendingProductTest() {
-        mainPage.MainPage()
+        mainPage.openMainPage()
                 .authorSearch();
         searchPage.searchPage();
         bookPage.openProductCard()

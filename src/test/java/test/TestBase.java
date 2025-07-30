@@ -23,7 +23,7 @@ public class TestBase {
     @BeforeAll
     static void setupConfig(){
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
+        Configuration.browserVersion = System.getProperty("browserVersion", "127.0");
         Configuration.browserSize = System.getProperty("browserResolution", "1920x1080");
         Configuration.baseUrl = "https://www.labirint.ru/";
         Configuration.pageLoadStrategy = "eager";

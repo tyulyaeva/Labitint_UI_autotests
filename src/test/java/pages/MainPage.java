@@ -19,7 +19,7 @@ public class MainPage {
                                   pendingButton = $("._icon_1a3wc_41");
 
     @Step("Открыть страницу: https://www.labirint.ru/")
-    public MainPage MainPage() {
+    public MainPage openMainPage() {
         open(MainPage);
         return this;
     }
@@ -41,7 +41,7 @@ public class MainPage {
     @Step("Проверить, что установлен в качестве текущей локации г.Санкт-Петербург")
     public MainPage checkChangeCityClick() {
         regionLocation
-                .shouldHave(text("Санкт-Петербург"));
+                .shouldHave(text(City));
         return this;
     }
 
