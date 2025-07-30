@@ -11,10 +11,13 @@ import static com.codeborne.selenide.Selenide.open;
 public class MainPage {
 
     private static final String  MainPage = "https://www.labirint.ru/",
-                                 AUTHOR = "Стивен Кинг";
+                                 AUTHOR = "Стивен Кинг",
+                                 City = "Санкт-Петербург";
     private final SelenideElement searchField =  $("[id=search-field"),
                                   regionLocation = $(".region-location-icon-txt"),
-                                  location = $(".g-alttext-deepblue:nth-child(3)");
+                                  location = $(".g-alttext-deepblue:nth-child(3)"),
+                                  pendingButton = $("._icon_1a3wc_41");
+
     @Step("Открыть страницу: https://www.labirint.ru/")
     public MainPage MainPage() {
         open(MainPage);
@@ -22,23 +25,30 @@ public class MainPage {
     }
 
     @Step("Найти книги автора 'Стивен Кинг'")
-    public MainPage AuthorSearch() {
+    public MainPage authorSearch() {
         searchField.
                 setValue(AUTHOR).pressEnter();
         return this;
     }
 
     @Step("Сменить текущую локацию на г.Санкт-Петербург")
-    public MainPage changeSity() {
+    public MainPage changeCity() {
         regionLocation.shouldBe(visible).click();
         location.click();
         return this;
     }
 
     @Step("Проверить, что установлен в качестве текущей локации г.Санкт-Петербург")
-    public MainPage checkChangeSityClick() {
+    public MainPage checkChangeCityClick() {
         regionLocation
                 .shouldHave(text("Санкт-Петербург"));
+        return this;
+    }
+
+    @Step("Перейти на страницу с отложенными товарами")
+    public MainPage clickPendingButton() {
+        pendingButton
+                .click();
         return this;
     }
 }

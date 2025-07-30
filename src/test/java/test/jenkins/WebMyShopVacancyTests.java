@@ -16,6 +16,7 @@ public class WebMyShopVacancyTests extends TestBase {
     BookPage bookPage = new BookPage();
     BasketPage basketPage = new BasketPage();
     CatalogSectionPage catalogSectionPage = new CatalogSectionPage();
+    PendingProductPage pendingProductPage = new PendingProductPage();
 
     @Tag("myshop_form")
     @Feature("VacancyJavaQa")
@@ -25,8 +26,8 @@ public class WebMyShopVacancyTests extends TestBase {
     @DisplayName("Тест-кейс №1: Проверка поиска книги")
     void searchResultsShouldContainDeterminedBookTest () {
         mainPage.MainPage()
-                .AuthorSearch();
-        searchPage.SearchPage();
+                .authorSearch();
+        searchPage.searchPage();
     }
 
     @Tag("myshop_form")
@@ -48,8 +49,8 @@ public class WebMyShopVacancyTests extends TestBase {
     @Test
     void checkProductCardTest() {
         mainPage.MainPage()
-                .AuthorSearch();
-        searchPage.SearchPage();
+                .authorSearch();
+        searchPage.searchPage();
         bookPage.openProductCard()
                 .checkProductCardPage();
     }
@@ -62,8 +63,8 @@ public class WebMyShopVacancyTests extends TestBase {
     @Test
     void checkProductBasketTest() {
         mainPage.MainPage()
-                .AuthorSearch();
-        searchPage.SearchPage();
+                .authorSearch();
+        searchPage.searchPage();
         bookPage.openProductCard()
                 .clickToAddProduct();
         basketPage.
@@ -79,8 +80,8 @@ public class WebMyShopVacancyTests extends TestBase {
     @Test
     void changeLocationPersonTest() {
         mainPage.MainPage()
-                .changeSity()
-                .checkChangeSityClick();
+                .changeCity()
+                .checkChangeCityClick();
     }
     @Tag("myshop_form")
     @Feature("VacancyJavaQa")
@@ -90,12 +91,28 @@ public class WebMyShopVacancyTests extends TestBase {
     @Test
     void checkEmptyBasketTest() {
         mainPage.MainPage()
-                .AuthorSearch();
-        searchPage.SearchPage();
+                .authorSearch();
+        searchPage.searchPage();
         bookPage.openProductCard()
                 .clickToAddProduct();
         basketPage
                 .checkProductBasketTest()
                 .delProductBasketTest();
+    }
+
+    @Tag("myshop_form")
+    @Feature("VacancyJavaQa")
+    @Story("Тестирование формы сайта: https://www.labirint.ru/")
+    @Owner("inna_tyulyaeva")
+    @DisplayName("Тест-кейс №7: Проверка добавления товара в отложенные товары")
+    @Test
+    void checkPendingProductTest() {
+        mainPage.MainPage()
+                .authorSearch();
+        searchPage.searchPage();
+        bookPage.openProductCard()
+                .clickToPendingProduct();
+        mainPage.clickPendingButton();
+        pendingProductPage.checkPendingProduct();
     }
 }

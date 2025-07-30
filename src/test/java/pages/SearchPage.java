@@ -11,7 +11,7 @@ public class SearchPage {
     private final SelenideElement searchResult = $(".search-result");
 
     @Step("Найти книгу 'Воспламеняющая' автора 'Стивен Кинг'")
-    public SearchPage SearchPage() {
+    public SearchPage searchPage() {
         searchResult.shouldHave(text(BOOKNAME));
         return this;
     }
