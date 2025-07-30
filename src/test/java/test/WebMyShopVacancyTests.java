@@ -1,4 +1,4 @@
-package test.jenkins;
+package test;
 import pages.*;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -6,7 +6,6 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import test.TestBase;
 
 @DisplayName("Labirint.ru тесты")
 public class WebMyShopVacancyTests extends TestBase {
