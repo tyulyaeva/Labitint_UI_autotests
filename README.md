@@ -105,10 +105,10 @@
 
 ---
 <a id="jenkins"></a>
-## <img src="media/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/Labirint_Inna_Tyulyaeva/"> Jenkins </a>
+## <img src="media/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/Labirint_UI_autotests/"> Jenkins </a>
 Для запуска сборки необходимо перейти в раздел <code>Собрать с параметрами</code>, выбрать необходимые параметры и нажать кнопку <code>Собрать</code>.
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/Labirint_Inna_Tyulyaeva/"><img src="media/screens/jenkinsEx1.png" alt="Jenkins1"/></a>
+<a href="https://jenkins.autotests.cloud/job/Labirint_UI_autotests/"><img src="media/screens/jenkinsEx1.png" alt="Jenkins1"/></a>
 </p>
 После выполнения сборки, в блоке История сборок напротив номера сборки появятся значки Allure Report и Allure TestOps, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
 
@@ -153,7 +153,7 @@ ${TASK}
 ---
 
 <a id="allureReport"></a>
-## <img src="media/logo/Allure.svg" width="25" height="25"/> [Allure](https://jenkins.autotests.cloud/job/ReqresIn_API_autotests/19/allure/) отчет
+## <img src="media/logo/Allure.svg" width="25" height="25"/> [Allure](https://jenkins.autotests.cloud/job/Labirint_UI_autotests/20/allure/) отчет
 
 ### Главная страница отчета
 
@@ -169,7 +169,7 @@ ${TASK}
 
 ---
 <a id="allure"></a>
-## <img alt="Allure_TO" height="25" src="media/logo/AllureTestOps.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/4844/dashboards">Allure TestOps</a>
+## <img alt="Allure_TO" height="25" src="media/logo/AllureTestOps.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/4843/dashboards">Allure TestOps</a>
 На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
 ## Основная страница отчёта
 
@@ -185,7 +185,7 @@ ${TASK}
 ---
 
 <a id="jira"></a>
-## <img src="media/logo/Jira.svg" width="25" height="25"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1480)
+## <img src="media/logo/Jira.svg" width="25" height="25"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1462)
 
 Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
 ### Задача в Jira
