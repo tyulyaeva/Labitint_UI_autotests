@@ -9,17 +9,17 @@
 ---
 
 ## ☑️ Содержание
-
-- [Технологии и инструменты](#tools)
-- [Реализованные проверки](#cases)
-- [Сборка в Jenkins и запуск из терминала](#jenkins)
-- [Allure-отчёт](#allure)
-- [Уведомление в Telegram](#telegram)
-- [Примеры видео выполнения тестов](#video)
-
+- <a href="#tools"> Технологии и инструменты</a>
+- <a href="#checking"> Реализованные проверки</a>
+- <a href="#jenkins"> Сборка в Jenkins</a>
+- <a href="#console"> Запуск тестов </a>
+- <a href="#allureReport"> Allure отчет</a>
+- <a href="#allure"> Интеграция с Allure TestOps</a>
+- <a href="#jira"> Интеграция с Jira</a>  
+- <a href="#tg"> Уведомления в Telegram с использованием бота</a>
+- <a href="#video"> Примеры видео выполнения тестов</a>
 ---
 
-<a id="tools"></a>
 <a id="tools"></a>
 <h2>🛠️ Технологии и инструменты</h2>
 
@@ -91,7 +91,7 @@
 </table>
 
 
-<a id="cases"></a>
+<a id="checking"></a>
 ## ✅ Реализованные проверки
 
 - Тест-кейс №1: Проверка поиска книги
@@ -104,12 +104,16 @@
 - Тест-кейс №8: Проверка перехода на страницу 'Контакты'
 
 ---
-
 <a id="jenkins"></a>
-## 🧩 Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Labirint_Inna_Tyulyaeva/)
-
+## <img src="media/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Сборка в <a target="_blank" href="https://jenkins.autotests.cloud/job/Labirint_Inna_Tyulyaeva/"> Jenkins </a>
+Для запуска сборки необходимо перейти в раздел <code>Собрать с параметрами</code>, выбрать необходимые параметры и нажать кнопку <code>Собрать</code>.
 <p align="center">
-  <img src="media/screens/jenkinsEx.png" alt="Jenkins Build" width="950"/>
+<a href="https://jenkins.autotests.cloud/job/Labirint_Inna_Tyulyaeva/"><img src="media/screens/jenkinsEx1.png" alt="Jenkins1"/></a>
+</p>
+После выполнения сборки, в блоке История сборок напротив номера сборки появятся значки Allure Report и Allure TestOps, при клике на которые откроется страница с сформированным html-отчетом и тестовой документацией соответственно.
+
+<a id="console"></a>
+<p align="center">
 </p>
 
 ### ⚙️ Параметры сборки
@@ -146,24 +150,77 @@ ${TASK}
 -DselenoidUserLogin=${SELENOID_LOGIN}
 -DselenoidUserPassword=${SELENOID_PASSWORD}
 ```
-
 ---
 
-<a id="allure"></a>
-## 📊 [Allure Report](https://jenkins.autotests.cloud/job/Labirint_UI_autotests/20/allure/)
+<a id="allureReport"></a>
+## <img src="media/logo/Allure.svg" width="25" height="25"/> [Allure](https://jenkins.autotests.cloud/job/ReqresIn_API_autotests/19/allure/) отчет
+
+### Главная страница отчета
 
 <p align="center">
-  <img src="media/screens/allure1.png" width="850" alt="Allure Overview Dashboard"/>
+<img src="media/screens/allure_auto_main.png" alt="Allure report" width="1000" height="800">
+</p>
+
+### Тест-кейсы
+
+<p align="center">
+<img src="media/screens/allure_auto_2.png" alt="Test Case" width="1000" height="800">
+</p>
+
+---
+<a id="allure"></a>
+## <img alt="Allure_TO" height="25" src="media/logo/AllureTestOps.svg" width="25"/> </a>Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/4844/dashboards">Allure TestOps</a>
+На *Dashboard* в <code>Allure TestOps</code> видна статистика количества тестов. Новые тесты, а так же результаты прогона приходят по интеграции при каждом запуске сборки.
+## Основная страница отчёта
+
+<p align="center">  
+<img title="Allure TestOps Dashboard" src="media/screens/allure_to_main.png" width="850">  
+</p>  
+
+## Пример тест-кейса
+<p align="center">
+<img title="AllureTC" src="media/screens/allure_to_manual.png">
 </p>
 
 ---
 
-<a id="telegram"></a>
-## 📩 Уведомления в Telegram
+<a id="jira"></a>
+## <img src="media/logo/Jira.svg" width="25" height="25"/> Интеграция с [Jira](https://jira.autotests.cloud/browse/HOMEWORK-1480)
+
+Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>, в тикете отображается, какие тест-кейсы были написаны в рамках задачи и результат их прогона.
+### Задача в Jira
+
+<p align="center">
+<img src="media/screens/jira_main.png" alt="TestOps launch" width="1000" height="800">
+</p>
+
+#### Содержание задачи
+
+- Цель
+- Задачи для выполнения
+- Тест-кейсы из Allure TestOps
+- Результат прогона тестов в Allure TestOps
+
+---
+
+<a id="tg"></a>
+## <img src="media/logo/Telegram.svg" width="25" height="35"/> Уведомления в Telegram чат с ботом
+
+После завершения сборки специальный бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с отчетом о прогоне тестов.
 
 <p align="center">
   <img src="media/screens/tgAllert.jpeg" width="550" alt="Telegram Alert"/>
 </p>
+
+---
+## Содержание уведомления в Telegram
+
+- Окружение
+- Комментарий
+- Длительность прохождения тестов
+- Общее количество сценариев
+- Процент прохождения тестов
+- Ссылка на Allure отчет
 
 ---
 
