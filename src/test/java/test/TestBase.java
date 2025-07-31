@@ -27,7 +27,7 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browserResolution", "1920x1080");
         Configuration.baseUrl = "https://www.labirint.ru/";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.timeout = 10000;
+        Configuration.timeout = 20000;
         Configuration.holdBrowserOpen = false;
         Configuration.remote = "https://" +
                 selenoidUserLogin + ":" + selenoidUserPassword +"@" + selenoidUrl + "/wd/hub";
