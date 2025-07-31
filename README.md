@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.labirint.ru/">
-    <img src="media/labirint.png" width="910" height="250" alt="ЛАБИРИНТ">
+    <img src="media/logo/labirint.png" width="910" height="250" alt="ЛАБИРИНТ">
   </a>
 </p>
 
@@ -39,52 +39,52 @@
   <tr>
     <td align="center">
       <a href="https://www.oracle.com/java/" target="_blank">
-        <img src="media/java-svgrepo-com.svg" width="50" height="50" alt="Java"/>
+        <img src="media/logo/java-svgrepo-com.svg" width="50" height="50" alt="Java"/>
       </a>
     </td>
     <td align="center">
       <a href="https://www.jetbrains.com/idea/" target="_blank">
-        <img src="media/intellij-idea-svgrepo-com.svg" width="50" height="50" alt="IDEA"/>
+        <img src="media/logo/intellij-idea-svgrepo-com.svg" width="50" height="50" alt="IDEA"/>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/" target="_blank">
-        <img src="media/github-badge-svgrepo-com.svg" width="50" height="50" alt="GitHub"/>
+        <img src="media/logo/github-badge-svgrepo-com.svg" width="50" height="50" alt="GitHub"/>
       </a>
     </td>
     <td align="center">
       <a href="https://junit.org/junit5/" target="_blank">
-        <img src="media/Junit5.svg" width="50" height="50" alt="JUnit 5"/>
+        <img src="media/logo/Junit5.svg" width="50" height="50" alt="JUnit 5"/>
       </a>
     </td>
     <td align="center">
       <a href="https://gradle.org/" target="_blank">
-        <img src="media/gradle-svgrepo-com.svg" width="50" height="50" alt="Gradle"/>
+        <img src="media/logo/gradle-svgrepo-com.svg" width="50" height="50" alt="Gradle"/>
       </a>
     </td>
     <td align="center">
       <a href="https://selenide.org/" target="_blank">
-        <img src="media/Selenide.svg" width="50" height="50" alt="Selenide"/>
+        <img src="media/logo/Selenide.svg" width="50" height="50" alt="Selenide"/>
       </a>
     </td>
     <td align="center">
       <a href="https://aerokube.com/selenoid/" target="_blank">
-        <img src="media/Selenoid.svg" width="50" height="50" alt="Selenoid"/>
+        <img src="media/logo/Selenoid.svg" width="50" height="50" alt="Selenoid"/>
       </a>
     </td>
     <td align="center">
       <a href="https://docs.qameta.io/allure/" target="_blank">
-        <img src="media/Allure.svg" width="50" height="50" alt="Allure"/>
+        <img src="media/logo/Allure.svg" width="50" height="50" alt="Allure"/>
       </a>
     </td>
     <td align="center">
       <a href="https://www.jenkins.io/" target="_blank">
-        <img src="media/Jenkins.svg" width="50" height="50" alt="Jenkins"/>
+        <img src="media/logo/Jenkins.svg" width="50" height="50" alt="Jenkins"/>
       </a>
     </td>
     <td align="center">
       <a href="https://telegram.org/" target="_blank">
-        <img src="media/Telegram.svg" width="50" height="50" alt="Telegram"/>
+        <img src="media/logo/Telegram.svg" width="50" height="50" alt="Telegram"/>
       </a>
     </td>
   </tr>
@@ -109,7 +109,7 @@
 ## 🧩 Сборка в [Jenkins](https://jenkins.autotests.cloud/job/Labirint_Inna_Tyulyaeva/)
 
 <p align="center">
-  <img src="media/jenkinsEx.png" alt="Jenkins Build" width="950"/>
+  <img src="media/screens/jenkinsEx.png" alt="Jenkins Build" width="950"/>
 </p>
 
 ### ⚙️ Параметры сборки
@@ -153,7 +153,7 @@ ${TASK}
 ## 📊 [Allure Report](https://jenkins.autotests.cloud/job/Labirint_UI_autotests/20/allure/)
 
 <p align="center">
-  <img src="media/allure.png" width="850" alt="Allure Overview Dashboard"/>
+  <img src="media/screens/allure1.png" width="850" alt="Allure Overview Dashboard"/>
 </p>
 
 ---
@@ -162,7 +162,7 @@ ${TASK}
 ## 📩 Уведомления в Telegram
 
 <p align="center">
-  <img src="media/tgAllert.jpeg" width="550" alt="Telegram Alert"/>
+  <img src="media/screens/tgAllert.jpeg" width="550" alt="Telegram Alert"/>
 </p>
 
 ---
@@ -171,5 +171,5 @@ ${TASK}
 ## 🎥 Пример видео выполнения тестов (Selenoid)
 
 <p align="center">
-  <img src="media/video1.gif" width="550" height="350" alt="Video Example"/>
+  <img src="media/screens/video1.gif" width="550" height="350" alt="Video Example"/>
 </p>
