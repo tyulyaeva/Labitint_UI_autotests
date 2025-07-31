@@ -6,7 +6,7 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
-public class BookPage {
+public class ProductPage {
     public static final String BOOKNAME = "Воспламеняющая";
     private final SelenideElement nameProduct = $("._h1_5o36c_18"),
                                   productCard = $("[href='/books/867711/']"),
@@ -15,25 +15,25 @@ public class BookPage {
                                           "img[alt='heart-outline-gray-700']");
 
     @Step("Проверить, что заголовок карточки товара содержит наименование книги")
-    public BookPage checkProductCardPage() {
+    public ProductPage checkProductCardPage() {
         nameProduct.shouldHave(text(BOOKNAME));
         return this;
     }
 
     @Step("Открыть карточку товара")
-    public BookPage openProductCard() {
+    public ProductPage openProductCard() {
         productCard.click();
         return this;
     }
 
     @Step("Добавить товар в корзину")
-    public BookPage clickToAddProduct() {
+    public ProductPage clickToAddProduct() {
         buttonAddProduct.click();
         return this;
     }
 
     @Step("Добавить товар в отложенные")
-    public BookPage clickToPendingProduct() {
+    public ProductPage clickToPendingProduct() {
         buttonPendingProduct.click();
         return this;
     }

@@ -16,7 +16,8 @@ public class MainPage {
     private final SelenideElement searchField =  $("[id=search-field"),
                                   regionLocation = $(".region-location-icon-txt"),
                                   location = $(".g-alttext-deepblue:nth-child(3)"),
-                                  pendingButton = $("._icon_1a3wc_41");
+                                  pendingButton = $("a:nth-child(3) > span:nth-child(3)"),
+                                  contacts = $("div[class='b-header-b-sec-menu col-md-12'] li:nth-child(9) a:nth-child(1)");
 
     @Step("Открыть страницу: https://www.labirint.ru/")
     public MainPage openMainPage() {
@@ -48,6 +49,13 @@ public class MainPage {
     @Step("Перейти на страницу с отложенными товарами")
     public MainPage clickPendingButton() {
         pendingButton
+                .click();
+        return this;
+    }
+
+    @Step("Перейти на страницу с контактами")
+    public MainPage clickMenuContacts() {
+        contacts
                 .click();
         return this;
     }

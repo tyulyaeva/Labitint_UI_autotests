@@ -5,7 +5,7 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
-import static pages.BookPage.BOOKNAME;
+import static pages.ProductPage.BOOKNAME;
 
 public class PendingProductPage {
     private final SelenideElement pendingProduct =  $(".products-row");
