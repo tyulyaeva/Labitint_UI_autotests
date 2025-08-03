@@ -1,4 +1,5 @@
 package test;
+
 import io.qameta.allure.*;
 import pages.*;
 import org.junit.jupiter.api.DisplayName;
@@ -6,7 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Labirint.ru тесты")
-public class SectionTests extends TestBase{
+public class SectionTests extends TestBase {
 
     MainPage mainPage = new MainPage();
     CatalogSectionPage catalogSectionPage = new CatalogSectionPage();
@@ -31,7 +32,7 @@ public class SectionTests extends TestBase{
     @DisplayName("Тест-кейс №8: Проверка перехода на страницу 'Контакты'")
     @Test
     @Severity(SeverityLevel.BLOCKER)
-    void checkOpenContactPage () {
+    void checkOpenContactPage() {
         mainPage.openMainPage()
                 .clickMenuContacts();
         contactPage.checkContactPage();

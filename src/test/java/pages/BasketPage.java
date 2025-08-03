@@ -10,9 +10,9 @@ public class BasketPage {
 
     private static final String BOOKNAME = "Воспламеняющая";
     private final SelenideElement basket = $("._cartCount_1a3wc_104"),
-                                  basketPanel = $(".b-bask-panel.b-bask-panel-order"),
-                                  emptyBasketDel = $("div[class='text-regular empty-basket-link trash-link'] span[class='b-link-popup basket-header-links']"),
-                                  emptyBasketCheck = $("div[class='b-bask-panel'] span[class='g-alttext-small g-alttext-grey g-alttext-head']");
+            basketPanel = $(".b-bask-panel.b-bask-panel-order"),
+            emptyBasketDel = $("div[class='text-regular empty-basket-link trash-link'] span[class='b-link-popup basket-header-links']"),
+            emptyBasketCheck = $("div[class='b-bask-panel'] span[class='g-alttext-small g-alttext-grey g-alttext-head']");
 
     @Step("Проверить добавленный товар в корзине")
     public BasketPage checkProductBasketTest() {

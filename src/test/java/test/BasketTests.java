@@ -1,4 +1,5 @@
 package test;
+
 import io.qameta.allure.*;
 import pages.*;
 import org.junit.jupiter.api.DisplayName;
@@ -6,7 +7,7 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Labirint.ru тесты")
-public class BasketTests extends TestBase{
+public class BasketTests extends TestBase {
 
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();

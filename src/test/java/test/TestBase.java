@@ -28,18 +28,9 @@ public class TestBase {
         Configuration.baseUrl = "https://www.labirint.ru/";
         Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 20000;
-        Configuration.holdBrowserOpen = false;
         Configuration.remote = "https://" +
                 selenoidUserLogin + ":" + selenoidUserPassword +"@" + selenoidUrl + "/wd/hub";
-    }
 
-    @BeforeEach
-    public void setupConfigBeforeEach(){
-        Configuration.browserSize = "1920x1080";
-        Configuration.pageLoadStrategy ="eager";
-        Configuration.baseUrl = "https://www.labirint.ru/";
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(
                 "enableVNC", true,
@@ -47,6 +38,11 @@ public class TestBase {
                 "name", "Test: " + UUID.randomUUID()
         ));
         Configuration.browserCapabilities = capabilities;
+    }
+
+    @BeforeEach
+    public void setupConfigBeforeEach(){
+        SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
     @AfterEach

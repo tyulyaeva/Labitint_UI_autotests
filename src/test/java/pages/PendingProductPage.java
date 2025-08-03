@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static pages.ProductPage.BOOKNAME;
 
 public class PendingProductPage {
-    private final SelenideElement pendingProduct =  $(".products-row");
+    private final SelenideElement pendingProduct = $(".products-row");
 
     @Step("Проверить на странице с отложенными товарами наличие отложенного товара")
     public PendingProductPage checkPendingProduct() {

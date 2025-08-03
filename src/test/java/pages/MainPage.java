@@ -10,14 +10,14 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
 
-    private static final String  MainPage = "https://www.labirint.ru/",
-                                 AUTHOR = "Стивен Кинг",
-                                 City = "Санкт-Петербург";
-    private final SelenideElement searchField =  $("[id=search-field"),
-                                  regionLocation = $(".region-location-icon-txt"),
-                                  location = $(".g-alttext-deepblue:nth-child(3)"),
-                                  pendingButton = $("a:nth-child(3) > span:nth-child(3)"),
-                                  contacts = $("div[class='b-header-b-sec-menu col-md-12'] li:nth-child(9) a:nth-child(1)");
+    private static final String MainPage = "https://www.labirint.ru/",
+            AUTHOR = "Стивен Кинг",
+            City = "Санкт-Петербург";
+    private final SelenideElement searchField = $("[id=search-field"),
+            regionLocation = $(".region-location-icon-txt"),
+            location = $(".g-alttext-deepblue:nth-child(3)"),
+            pendingButton = $("a:nth-child(3) > span:nth-child(3)"),
+            contacts = $("div[class='b-header-b-sec-menu col-md-12'] li:nth-child(9) a:nth-child(1)");
 
     @Step("Открыть страницу: https://www.labirint.ru/")
     public MainPage openMainPage() {

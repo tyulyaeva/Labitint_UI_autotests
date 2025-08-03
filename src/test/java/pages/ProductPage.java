@@ -9,9 +9,9 @@ import static com.codeborne.selenide.Selenide.$;
 public class ProductPage {
     public static final String BOOKNAME = "Воспламеняющая";
     private final SelenideElement nameProduct = $("._h1_5o36c_18"),
-                                  productCard = $("[href='/books/867711/']"),
-                                  buttonAddProduct = $("._actions_zuu52_155").$("._button_ssd04_1"),
-                                  buttonPendingProduct = $("._button_ssd04_1._is-m_ssd04_85._is-gray_ssd04_128._is-rounded_ssd04_94");
+            productCard = $("[href='/books/867711/']"),
+            buttonAddProduct = $("._actions_zuu52_155").$("._button_ssd04_1"),
+            buttonPendingProduct = $("._button_ssd04_1._is-m_ssd04_85._is-gray_ssd04_128._is-rounded_ssd04_94");
 
     @Step("Проверить, что заголовок карточки товара содержит наименование книги")
     public ProductPage checkProductCardPage() {

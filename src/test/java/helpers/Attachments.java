@@ -2,7 +2,9 @@ package helpers;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Attachment;
+
 import static com.codeborne.selenide.WebDriverRunner.isFirefox;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
