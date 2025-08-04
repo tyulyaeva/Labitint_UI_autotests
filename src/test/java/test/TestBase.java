@@ -14,14 +14,14 @@ import helpers.Attachments;
 
 import java.util.Map;
 import java.util.UUID;
-import config.ConfigReader;
+import config.WebProvider;
 
 public class TestBase {
-    static String selenoidUserLogin = System.getProperty("selenoidUserLogin", "user1");
-    static String selenoidUserPassword = System.getProperty("selenoidUserPassword", "1234");
-    static String selenoidUrl = System.getProperty(
-            "selenoidUrl", "selenoid.autotests.cloud");
-    public static final WebConfig webConfig = ConfigReader.getWebConfig();
+//    static String selenoidUserLogin = System.getProperty("selenoidUserLogin", "user1");
+//    static String selenoidUserPassword = System.getProperty("selenoidUserPassword", "1234");
+//    static String selenoidUrl = System.getProperty(
+//            "selenoidUrl", "selenoid.autotests.cloud");
+    public static final WebConfig webConfig = WebProvider.getWebConfig();
 
     @BeforeAll
     static void setupConfig(){
