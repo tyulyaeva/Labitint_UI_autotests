@@ -17,25 +17,12 @@ import java.util.UUID;
 import config.WebProvider;
 
 public class TestBase {
-//    static String selenoidUserLogin = System.getProperty("selenoidUserLogin", "user1");
-//    static String selenoidUserPassword = System.getProperty("selenoidUserPassword", "1234");
-//    static String selenoidUrl = System.getProperty(
-//            "selenoidUrl", "selenoid.autotests.cloud");
     public static final WebConfig webConfig = WebProvider.getWebConfig();
 
     @BeforeAll
     static void setupConfig(){
         ProjectConfig projectConfig = new ProjectConfig(webConfig);
         projectConfig.setConfig();
-
-//        Configuration.browser = System.getProperty("browser", "chrome");
-//        Configuration.browserVersion = System.getProperty("browserVersion", "127.0");
-//        Configuration.browserSize = System.getProperty("browserResolution", "1920x1080");
-//        Configuration.baseUrl = "https://www.labirint.ru/";
-//        Configuration.pageLoadStrategy = "eager";
-//        Configuration.timeout = 20000;
-//        Configuration.remote = "https://" +
-//                selenoidUserLogin + ":" + selenoidUserPassword +"@" + selenoidUrl + "/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.of(

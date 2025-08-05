@@ -27,8 +27,8 @@ public class BasketTests extends TestBase {
         searchPage.searchPage();
         productPage.openProductCard()
                 .clickToAddProduct();
-        basketPage.
-                checkProductBasketTest();
+        basketPage
+                .checkProductBasketTest();
 
     }
 
